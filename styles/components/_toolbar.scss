@@ -271,6 +271,13 @@
       }
     }
 
+    // Responsive Preview
+    .responsive-preview-icon {
+      &:before {
+        mask-image: icon('responsive-preview');
+      }
+    }
+
     // User
     .toolbar-icon-user {
       &:before {

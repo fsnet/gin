@@ -206,6 +206,11 @@ function gin_form_alter(&$form, $form_state, $form_id) {
             'gin-sticky',
           ],
         ],
+        '#attached' => [
+          'library' => [
+            'gin/gin_sticky',
+          ],
+        ],
       ];
       // Assign status to gin_sticky.
       $form['status']['#group'] = 'gin_sticky';
@@ -269,6 +274,11 @@ function gin_form_alter(&$form, $form_state, $form_id) {
         unset($form['actions']['submit']);
       }
     }
+  }
+
+  // Unset published title
+  if (isset($form['meta']['published'])) {
+    unset($form['meta']['published']);
   }
 }
 

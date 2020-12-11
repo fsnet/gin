@@ -20,18 +20,6 @@
   }
 }
 
-.gin--edit-form {
-  .page-title {
-    @include mq($breakpointLarge) {
-      font-size: 1.6em;
-    }
-
-    @include mq($breakpointWide) {
-      font-size: 1.75em;
-    }
-  }
-}
-
 body:not(.gin--edit-form) {
   .page-title {
     @include mq($breakpointBig) {

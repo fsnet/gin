@@ -21,16 +21,12 @@
 
     .region-sticky {
       opacity: 1;
-      height: 88px;
-      backdrop-filter: none;
-      background: rgba($colorAppBackground, .98);
+      position: relative;
+      height: $stickyBar;
     }
 
-    // Darkmode overrides
-    &.gin--dark-mode {
-      .region-sticky {
-        background: rgba($colorDarkAppBackground, .98);
-      }
+    .sticky-shadow {
+      position: static;
     }
   }
 

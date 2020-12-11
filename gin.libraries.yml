@@ -60,3 +60,7 @@ gin_custom_css:
   css:
     theme:
       public://gin-custom.css: { weight: 100 }
+
+gin_sticky:
+  js:
+    dist/js/gin_sticky.js: { minified: true }
