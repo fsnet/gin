@@ -269,11 +269,6 @@ function gin_form_alter(&$form, $form_state, $form_id) {
       }
     }
   }
-
-  // Unset published title.
-  if (isset($form['meta']['published'])) {
-    unset($form['meta']['published']);
-  }
 }
 
 /**

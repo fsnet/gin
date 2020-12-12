@@ -186,6 +186,15 @@ body:not(.toolbar-tray-open) .layout-container {
     padding: 1.5rem 0 .5rem;
     margin-top: 0;
   }
+
+  .gin--edit-form & {
+    @include mq($breakpointBig) {
+      position: relative;
+      left: calc(50% - 3rem);
+      transform: translateX(-50%);
+      max-width: $breakpointWide;
+    }
+  }
 }
 
 .gin-sticky {
@@ -193,7 +202,7 @@ body:not(.toolbar-tray-open) .layout-container {
 }
 
 // Action bar
-.layout-region-node-secondary__actions {
+.layout-node-form__actions {
   z-index: 102;
   position: fixed;
   bottom: 0;
@@ -230,37 +239,49 @@ body:not(.toolbar-tray-open) .layout-container {
   }
 
   @include mq($breakpointLarge) {
-    position: static;
-    width: auto;
-    padding: .5rem 1.5rem;
-    margin: 0;
-    background: none;
-    border-bottom: 1px solid var(--colorGinBorder);
+    z-index: 101; // Fix menus not showing
+    position: sticky;
+    top: 0;
+    margin-top: -214px;
+    margin-left: calc(100% + 1.5rem);
+    transform: translateX(-100%);
+    height: $stickyBar;
+    bottom: auto;
+    padding: 0;
+    border-bottom: 0 none;
     box-shadow: none;
 
     .gin-sticky {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
+      width: max-content;
+      padding-left: 1.5rem;
+      // background: var(--colorGinAppBackground);
 
-      .form-actions {
-        order: -1; // Set actions on top of everything else
-        width: 100%;
-        margin: 0;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10%;
+        margin-left: calc(-10% + 4px);
+        height: 100%;
+        background-image: linear-gradient(to right, #{rgba($colorAppBackground, 0)}, #{$colorAppBackground}, #{$colorAppBackground});
 
-        .button--primary {
-          flex-grow: 1;
-        }
-
-        [data-drupal-selector=edit-preview] {
-          margin-right: 0;
+        .gin--dark-mode & {
+          background-image: linear-gradient(to right, #{rgba($colorDarkAppBackground, 0)}, #{$colorDarkAppBackground}, #{$colorDarkAppBackground});
         }
       }
 
-      .form-type--checkbox {
-        margin-top: .5rem;
+      [data-drupal-selector=edit-preview] {
+        margin-right: 0;
       }
     }
+  }
+
+  @include mq($breakpointBig) {
+    margin-left: calc(100% + 2.5rem);
   }
 
   .form-actions {
