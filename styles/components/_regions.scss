@@ -246,6 +246,9 @@ body:not(.toolbar-tray-open) .layout-container {
 
         .button--primary {
           flex-grow: 1;
+        }
+
+        [data-drupal-selector=edit-preview] {
           margin-right: 0;
         }
       }
@@ -264,15 +267,5 @@ body:not(.toolbar-tray-open) .layout-container {
     display: flex;
     align-items: center;
     margin-right: 1.5rem;
-  }
-}
-
-.gin-sticky {
-  display: flex;
-  opacity: 0;
-  transition: opacity $transition--fast;
-
-  &--visible {
-    opacity: 1;
   }
 }

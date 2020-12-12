@@ -13,7 +13,6 @@ module.exports = {
   entry: {
     gin: ['./styles/gin.scss'],
     gin_init: ['./js/gin_init.js'],
-    gin_sticky: ['./js/gin_sticky.js'],
     gin_toolbar: ['./js/gin_toolbar.js', './styles/gin_toolbar.scss'],
     gin_horizontal_toolbar: ['./styles/gin_horizontal_toolbar.scss'],
     gin_classic_toolbar: ['./styles/gin_classic_toolbar.scss'],
