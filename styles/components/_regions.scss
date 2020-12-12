@@ -179,12 +179,23 @@ body:not(.toolbar-tray-open) .layout-container {
 }
 
 .region-meta {
+  z-index: 102;
+  position: relative;
   display: flex;
   margin-top: 16px;
 
   @include mq($breakpointMedium) {
     padding: 1.5rem 0 .5rem;
     margin-top: 0;
+  }
+
+  .gin--edit-form & {
+    @include mq($breakpointBig) {
+      position: relative;
+      left: calc(50% - 3rem);
+      transform: translateX(-50%);
+      max-width: $breakpointWide;
+    }
   }
 }
 
