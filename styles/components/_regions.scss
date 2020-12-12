@@ -179,6 +179,8 @@ body:not(.toolbar-tray-open) .layout-container {
 }
 
 .region-meta {
+  z-index: 102;
+  position: relative;
   display: flex;
   margin-top: 16px;
 
