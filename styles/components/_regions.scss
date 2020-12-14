@@ -44,7 +44,7 @@
     }
 
     .gin--horizontal-toolbar & {
-      top: 54px;
+      top: $toolbarHorizontal;
     }
 
     .gin--horizontal-toolbar.gin--edit-form & {
@@ -252,6 +252,18 @@ body:not(.toolbar-tray-open) .layout-container {
     padding: 0;
     border-bottom: 0 none;
     box-shadow: none;
+
+    .gin--horizontal-toolbar & {
+      top: $toolbarHorizontal;
+    }
+
+    .gin--classic-toolbar & {
+      top: 39px;
+    }
+
+    .gin--classic-toolbar.toolbar-tray-open & {
+      top: 79px;
+    }
 
     .gin-sticky {
       display: flex;
