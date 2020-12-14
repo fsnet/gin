@@ -44,7 +44,7 @@
     }
 
     .gin--horizontal-toolbar & {
-      top: 54px;
+      top: $toolbarHorizontal;
     }
 
     .gin--horizontal-toolbar.gin--edit-form & {

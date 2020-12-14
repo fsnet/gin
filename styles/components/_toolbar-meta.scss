@@ -175,9 +175,9 @@
   }
 }
 
-// Show expanded but not on a edit form
-body:not(.gin--edit-form) .toolbar-meta {
-  @include mq(1140px) {
+// Show expanded
+.toolbar-meta {
+  @include mq($breakpointWide) {
     .toolbar-bar {
       .toolbar-tab {
         margin-left: -.25em;

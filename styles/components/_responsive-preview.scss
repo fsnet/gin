@@ -8,18 +8,6 @@
 
 .toolbar {
   .toolbar-tab-responsive-preview.toolbar-tab {
-    // Open menu item
-    &.open {
-      &, &::before {
-        background-color: var(--colorGinLayer3Background);
-      }
-
-      .responsive-preview-trigger::after {
-        top: 10px;
-        transform: rotate(180deg);
-      }
-    }
-
     // Trigger
     .responsive-preview-trigger {
       width: 4em;
@@ -28,7 +16,11 @@
 
       // Hover
       &:hover::before {
-        background-color: var(--colorGinTitle) !important;
+        background-color: var(--colorGinTitle);
+
+        .gin--classic-toolbar & {
+          background-color: #fff;
+        }
       }
 
       // Icon
@@ -68,6 +60,24 @@
       // Configuration link
       .responsive-preview-configure {
         color: var(--colorGinTextLight);
+      }
+    }
+
+    // Open menu item
+    &.open {
+      &, &::before {
+        background-color: var(--colorGinLayer3Background);
+      }
+
+      .responsive-preview-trigger::before {
+        .gin--classic-toolbar & {
+          background-color: #111;
+        }
+      }
+
+      .responsive-preview-trigger::after {
+        top: 10px;
+        transform: rotate(180deg);
       }
     }
   }

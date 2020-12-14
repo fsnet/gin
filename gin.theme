@@ -442,6 +442,9 @@ function gin_preprocess_toolbar(&$variables) {
       $variables['user_picture'] = $url;
     }
   }
+
+  // Expose Toolbar variant.
+  $variables['toolbar_variant'] = _gin_toolbar();
 }
 
 /**

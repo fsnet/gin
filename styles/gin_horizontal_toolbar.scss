@@ -9,6 +9,7 @@
 
 // Components
 @import "components/coffee";
+@import "components/responsive-preview";
 
 // Toolbar
 .toolbar {
@@ -126,7 +127,7 @@
 
 .gin--horizontal-toolbar {
   @include mq($breakpointMedium) {
-    padding-top: 54px !important;
+    padding-top: $toolbarHorizontal !important;
   }
 }
 
@@ -159,8 +160,8 @@
 
 .gin--horizontal-toolbar.gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary {
   @include mq($breakpointLarge) {
-    top: 54px;
-    height: calc(100% - 54px);
+    top: $toolbarHorizontal;
+    height: calc(100% - #{$toolbarHorizontal});
   }
 }
 
@@ -174,7 +175,7 @@
 
     &,
     .toolbar-bar {
-      height: 54px;
+      height: $toolbarHorizontal;
     }
   }
 

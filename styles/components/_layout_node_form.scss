@@ -21,7 +21,7 @@
 
     .region-sticky {
       opacity: 1;
-      position: relative;
+      position: static;
       height: $stickyBar;
     }
 
