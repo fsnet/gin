@@ -1,6 +1,7 @@
 .entities-list {
   .item-container {
     // TEMP: Force small variants
+    > .entity-browser-remove-selected-entity,
     > .remove-button,
     >.replace-button,
     > .edit-button {
@@ -13,11 +14,91 @@
 }
 
 // When entities are embedded
-.entity-browser-form {
-  border: 0 none;
-  box-shadow: none;
+.gin-entity-browser {
+  .entity-browser-form {
+    padding: .5rem 0;
+    border: 0 none;
+    box-shadow: none;
 
-  .page-wrapper > .layout-container {
-    margin: 0;
+    .page-wrapper > .layout-container {
+      margin: 0;
+    }
+
+    .entities-list,
+    .view-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .views-row {
+      border: 1px solid #dbdbdb;
+      border-radius: #{$borderBig + 2px};
+
+      &:hover,
+      &:focus {
+        border-color: var(--colorGinPrimary) !important;
+        cursor: pointer;
+
+        .views-field-thumbnail__target-id {
+          border-color: var(--colorGinPrimary);
+        }
+      }
+    }
+
+    .views-field-name {
+      padding: .5rem;
+    }
+
+    .media-info {
+      word-wrap: break-word;
+    }
+
+    .views-field-thumbnail__target-id {
+      border: 3px solid transparent;
+      border-radius: $borderBig;
+      overflow: hidden;
+
+      &:hover,
+      &:focus {
+        border-color: var(--colorGinPrimary);
+      }
+    }
+
+    .entities-list {
+      border-top: $borderSmall solid var(--colorGinFormElementBorder);
+      padding-top: 1rem;
+
+      .entity-browser-remove-selected-entity {
+        display: flex;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .views-exposed-form {
+    box-shadow: none;
+  }
+
+}
+
+// The eb widget.
+.field--widget-entity-browser-entity-reference  {
+  .item-container {
+    border: 1px solid #dbdbdb;
+    border-radius: #{$borderBig + 2px};
+
+    .field__item {
+      border: 3px solid transparent;
+      border-radius: $borderBig;
+      overflow: hidden;
+
+      &:hover,
+      &:focus {
+        border-color: var(--colorGinPrimary) !important;
+        cursor: pointer;
+      }
+    }
   }
 }
