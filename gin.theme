@@ -239,6 +239,9 @@ function gin_form_alter(&$form, $form_state, $form_id) {
       unset($form['gin_sidebar']['actions']['preview']);
       unset($form['gin_sidebar']['actions']['submit']);
     }
+
+    // Attach library.
+    $form['#attached']['library'][] = 'gin/gin_editform';
   }
 
   // If not logged in hide changed and author node info on add forms.
