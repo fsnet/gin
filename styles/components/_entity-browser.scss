@@ -70,14 +70,13 @@
       bottom: 0;
       right: 0;
     }
-
   }
 }
 
 // Entity browser view in overlay
 .gin-entity-browser {
   .entity-browser-form {
-    padding: .5rem 0;
+    padding: 0;
     border: 0 none;
     box-shadow: none;
 
@@ -148,7 +147,6 @@
   .views-exposed-form {
     box-shadow: none;
   }
-
 }
 
 // Widget sorting.
@@ -163,5 +161,14 @@
         opacity: 1;
       }
     }
+  }
+}
+
+.eb-tabs {
+  margin-left: 4px; // Fix for outline
+  margin-bottom: 0.75em;
+
+  ul {
+    border-bottom: none; // Remove superflous bottom.
   }
 }
