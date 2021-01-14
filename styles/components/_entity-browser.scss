@@ -1,31 +1,5 @@
-@mixin icon-button($name) {
-  all: unset;
-
-  background-color: white;
-  background-image: icon($name);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 15px;
-
-  border-radius: 50%;
-  border-color: transparent !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-
-  color: transparent;
-  width: 29px;
-  height: 29px;
-  margin: .75rem;
-
-  &:hover,
-  &:focus {
-    border-color: var(--colorGinPrimary) !important;
-    cursor: pointer;
-  }
-}
-
 // Entity list in widget and browser selection.
 .entities-list {
-
   &:not(.entities-list--single-item) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -39,7 +13,7 @@
 
   .item-container {
     margin: 0;
-    border: 1px solid #dbdbdb;
+    border: 1px solid var(--colorGinBorder);
     border-radius: 14px;
     position: relative;
 
@@ -61,7 +35,7 @@
 
     > .entity-browser-remove-selected-entity,
     > .remove-button {
-      @include icon-button('trash');
+      @include custom-icon-button('trash');
       position: absolute;
       top: 0;
       right: 0;
@@ -69,7 +43,7 @@
 
     > .replace-button,
     > .edit-button {
-      @include icon-button('edit');
+      @include custom-icon-button('edit');
       position: absolute;
       bottom: 0;
       right: 0;
@@ -96,7 +70,7 @@
     }
 
     .views-row {
-      border: 1px solid #dbdbdb;
+      border: 1px solid var(--colorGinBorder);
       border-radius: #{$borderBig + 2px};
       position: relative;
 
@@ -124,7 +98,6 @@
         }
       }
     }
-
 
     .media-info {
       word-wrap: break-word;
