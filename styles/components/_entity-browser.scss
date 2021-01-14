@@ -28,9 +28,13 @@
 
   &:not(.entities-list--single-item) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     grid-gap: 1rem;
     margin-bottom: 1rem;
+  }
+
+  &.entities-list--single-item .item-container {
+    max-width: 180px;
   }
 
   .item-container {
